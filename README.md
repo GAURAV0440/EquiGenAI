@@ -345,3 +345,8 @@ Through this project, I learned:
 Gaurav Chawla
 
 Built as part of a Financial AI and Equity Research Automation project.
+
+<img width="1850" height="900" alt="image" src="https://github.com/user-attachments/assets/03228c61-d7ab-497a-8f47-56a8827dc982" />
+<img width="1850" height="900" alt="image" src="https://github.com/user-attachments/assets/cd6c3c89-df7d-43c3-9df3-11705dab45bf" />
+<img width="1850" height="900" alt="image" src="https://github.com/user-attachments/assets/b2ba8d08-3386-4869-ad47-9674de7b3a99" />
+<img width="1850" height="900" alt="image" src="https://github.com/user-attachments/assets/7fd49827-1908-43a2-8533-c8cb00079d07" />
