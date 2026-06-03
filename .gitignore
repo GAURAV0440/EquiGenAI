@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.pyc
+
+# Virtual Environment
+.venv/
+venv/
+
+# Environment Variables
+.env
+
+# Generated Files
+outputs/
+data/uploads/
+
+# OS Files
+.DS_Store
+
+# VS Code
+.vscode/
+
+# Streamlit Cache
+.streamlit/
+
+test_analyzer.py
+test_chart.py
+test_extractor.py
+test_pdf.py
+test_template.py
