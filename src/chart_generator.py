@@ -7,20 +7,45 @@ class ChartGenerator:
     @staticmethod
     def clean_number(value):
 
+        if value is None:
+            return 0.0
+
+        value = str(value).strip()
+
+        multiplier = 1
+
+        value_lower = value.lower()
+
+        if "bn" in value_lower or "billion" in value_lower:
+            multiplier = 1000
+
+        value = (
+            value
+            .replace("₹", "")
+            .replace("Rs.", "")
+            .replace("rs.", "")
+            .replace("Cr", "")
+            .replace("cr", "")
+            .replace("Crore", "")
+            .replace("crore", "")
+            .replace("Mn", "")
+            .replace("mn", "")
+            .replace("Million", "")
+            .replace("million", "")
+            .replace("Bn", "")
+            .replace("bn", "")
+            .replace("Billion", "")
+            .replace("billion", "")
+            .replace(",", "")
+            .replace("%", "")
+            .strip()
+        )
+
         try:
+            return float(value) * multiplier
 
-            return float(
-                str(value)
-                .replace("₹", "")
-                .replace("Rs.", "")
-                .replace("Cr", "")
-                .replace(",", "")
-                .replace("%", "")
-                .strip()
-            )
-
-        except:
-
+        except Exception:
+            print(f"Failed to convert: {value}")
             return 0.0
 
     @classmethod

@@ -112,6 +112,7 @@ DOCUMENT:
             )
 
             return analysis
+        
 
         except json.JSONDecodeError:
 

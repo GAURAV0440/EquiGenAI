@@ -98,9 +98,15 @@ if uploaded_file:
                     )
                 )
 
+                os.makedirs(
+                    "sample_outputs",
+                    exist_ok=True
+                )
+
+                company_name = uploaded_file.name.replace(".pdf", "").replace(" ", "_")
+
                 pdf_path = (
-                    "outputs/reports/"
-                    "equity_report.pdf"
+                    f"sample_outputs/{company_name}_Report.pdf"
                 )
 
                 PDFGenerator().generate(
@@ -266,6 +272,8 @@ if st.session_state.analysis:
         st.download_button(
             "📄 Download Research Report",
             data=pdf_file,
-            file_name="equity_report.pdf",
+            file_name=os.path.basename(
+                st.session_state.pdf_path
+            ),
             mime="application/pdf"
         )

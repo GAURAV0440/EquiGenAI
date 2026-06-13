@@ -32,7 +32,10 @@ Return ONLY valid JSON.
         "ebitda": "",
         "ebitda_margin": "",
         "pat": "",
-        "pat_growth": ""
+        "pat_growth": "",
+        "source_metric_revenue": "",
+        "source_metric_ebitda": "",
+        "source_metric_pat": ""
     },
 
     "growth_drivers": [
@@ -72,6 +75,44 @@ Rules:
     - Positive
     - Neutral
     - Cautious
+
 16. Use concise professional equity research language.
-17. All financial figures must match the source document exactly.
+
+17. Financial metrics mapping:
+
+Revenue can be extracted from:
+- Revenue
+- Total Revenue
+- Income
+- Total Income
+- Net Revenue
+- Operating Revenue
+- Revenue from Operations
+
+EBITDA can be extracted from:
+- EBITDA
+- Adjusted EBITDA
+- EBIT
+- Operating Profit
+- Operating Income
+
+PAT can be extracted from:
+- PAT
+- Profit After Tax
+- Net Profit
+- Net Income
+- Profit attributable to shareholders
+
+18. If exact Revenue/EBITDA/PAT labels do not exist,
+use the closest available equivalent and store the original name in:
+
+source_metric_revenue
+source_metric_ebitda
+source_metric_pat
+
+19. NEVER return 0 unless the document explicitly reports 0.
+
+20. Prefer current quarter values (Q2 FY26) over annual values when available.
+
+21. All financial figures must match the source document exactly.
 """

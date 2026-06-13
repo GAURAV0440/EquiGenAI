@@ -2,7 +2,7 @@ streamlit
 google-generativeai
 python-dotenv
 pymupdf
-pandas
+pandas                                                          
 matplotlib
 reportlab
 Pillow
